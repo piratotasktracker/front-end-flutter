@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 class AppTypography{
 
   //display
-  static TextStyle displayLarge(Color color){
+  static TextStyle displayLarge({Color? color}){
     return TextStyle(
       fontSize: 57,
-      height: 64,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       letterSpacing: -0.25,
@@ -14,20 +13,18 @@ class AppTypography{
     );
   }
 
-  static TextStyle displayMedium(Color color){
+  static TextStyle displayMedium({Color? color}){
     return TextStyle(
       fontSize: 45,
-      height: 52,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle displaySmall(Color color){
+  static TextStyle displaySmall({Color? color}){
     return TextStyle(
       fontSize: 36,
-      height: 44,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
@@ -35,30 +32,27 @@ class AppTypography{
   }
 
   //headline
-  static TextStyle headlineLarge(Color color){
+  static TextStyle headlineLarge({Color? color}){
     return TextStyle(
       fontSize: 32,
-      height: 40,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle headlineMedium(Color color){
+  static TextStyle headlineMedium({Color? color}){
     return TextStyle(
       fontSize: 28,
-      height: 36,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle headlineSmall(Color color){
+  static TextStyle headlineSmall({Color? color}){
     return TextStyle(
       fontSize: 24,
-      height: 32,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
@@ -66,30 +60,27 @@ class AppTypography{
   }
 
   //title
-  static TextStyle titleLarge(Color color){
+  static TextStyle titleLarge({Color? color}){
     return TextStyle(
       fontSize: 22,
-      height: 28,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle titleMedium(Color color){
+  static TextStyle titleMedium({Color? color}){
     return TextStyle(
       fontSize: 16,
-      height: 24,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle titleSmall(Color color){
+  static TextStyle titleSmall({Color? color}){
     return TextStyle(
       fontSize: 14,
-      height: 20,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
@@ -97,30 +88,27 @@ class AppTypography{
   }
 
   //label
-  static TextStyle labelLarge(Color color){
+  static TextStyle labelLarge({Color? color}){
     return TextStyle(
       fontSize: 14,
-      height: 20,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle labelMedium(Color color){
+  static TextStyle labelMedium({Color? color}){
     return TextStyle(
       fontSize: 12,
-      height: 16,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle labelSmall(Color color){
+  static TextStyle labelSmall({Color? color}){
     return TextStyle(
       fontSize: 10,
-      height: 16,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
@@ -128,40 +116,36 @@ class AppTypography{
   }
 
   //body
-  static TextStyle bodyLarge(Color color){
+  static TextStyle bodyLarge({Color? color}){
     return TextStyle(
       fontSize: 16,
-      height: 24,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle bodyMedium(Color color){
+  static TextStyle bodyMedium({Color? color}){
     return TextStyle(
       fontSize: 14,
-      height: 20,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle bodySmall(Color color){
+  static TextStyle bodySmall({Color? color}){
     return TextStyle(
       fontSize: 12,
-      height: 16,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,
     );
   }
 
-  static TextStyle bodyExtraSmall(Color color){
+  static TextStyle bodyExtraSmall({Color? color}){
     return TextStyle(
       fontSize: 10,
-      height: 12,
       fontFamily: 'Onest',
       fontWeight: FontWeight.w500,
       color: color,

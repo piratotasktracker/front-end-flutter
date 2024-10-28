@@ -1,20 +1,18 @@
-import 'package:flutter/material.dart';
+import 'package:front_end_flutter_tracker/presentation/login/login_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static GoRouter router(List<RouteBase> routes) => GoRouter(
-    redirect: (context, state) async {
-      
-    },
+    initialLocation: AppRoutes.login,
     routes: routes,
   );
 
   static final List<RouteBase> routes = [
 
     GoRoute(
-      path: '/login',
+      path: AppRoutes.login,
       name: AppRoutes.login,
-      builder: (context, state) => const SizedBox()
+      builder: (context, state) => const LoginScreen()
     ),
 
   ];

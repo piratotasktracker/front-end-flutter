@@ -2,6 +2,37 @@ import 'package:flutter/material.dart';
 
 abstract class IAppColorScheme {
 
+  Brightness get brightness;
+
+  //specific colors
+  Color get onError;
+  Color get errorContainer;
+  Color get onErrorContainer;
+  Color get surface;
+  Color get outline;
+  Color get outlineVariant;
+  Color get inverseSurface;
+  Color get inversePrimary;
+  Color get primaryFixed;
+  Color get onPrimaryFixed;
+  Color get primaryFixedDim;
+  Color get onPrimaryFixedVariant;
+  Color get secondaryFixed;
+  Color get onSecondaryFixed;
+  Color get secondaryFixedDim;
+  Color get onSecondaryFixedVariant;
+  Color get tertiaryFixed;
+  Color get onTertiaryFixed;
+  Color get tertiaryFixedDim;
+  Color get onTertiaryFixedVariant;
+  Color get surfaceDim;
+  Color get surfaceBright;
+  Color get surfaceContainerLowest;
+  Color get surfaceContainerLow;
+  Color get surfaceContainer;
+  Color get surfaceContainerHigh;
+  Color get surfaceContainerHighest;
+
   //main colors
   Color get main001;
   Color get main002;
@@ -37,8 +68,66 @@ abstract class IAppColorScheme {
 
 }
 
-
 class LightAppColorsScheme implements IAppColorScheme {
+
+  @override
+  Brightness get brightness => Brightness.light;
+
+  //specific colors
+  @override
+  Color get onError => const Color(0xffffffff);
+  @override
+  Color get errorContainer => const Color(0xffffdad6);
+  @override
+  Color get onErrorContainer => const Color(0xff410002);
+  @override
+  Color get surface => const Color(0xfffcf8f8);
+  @override
+  Color get outline => const Color(0xff747879);
+  @override
+  Color get outlineVariant => const Color(0xffc4c7c8);
+  @override
+  Color get inverseSurface => const Color(0xff313030);
+  @override
+  Color get inversePrimary => const Color(0xffc6c6c6);
+  @override
+  Color get primaryFixed => const Color(0xffe2e2e2);
+  @override
+  Color get onPrimaryFixed => const Color(0xff1b1b1b);
+  @override
+  Color get primaryFixedDim => const Color(0xffc6c6c6);
+  @override
+  Color get onPrimaryFixedVariant => const Color(0xff474747);
+  @override
+  Color get secondaryFixed => const Color(0xffe2e2e2);
+  @override
+  Color get onSecondaryFixed => const Color(0xff1b1b1b);
+  @override
+  Color get secondaryFixedDim => const Color(0xffc6c6c6);
+  @override
+  Color get onSecondaryFixedVariant => const Color(0xff474747);
+  @override
+  Color get tertiaryFixed => const Color(0xffe2e2e2);
+  @override
+  Color get onTertiaryFixed => const Color(0xff1b1b1b);
+  @override
+  Color get tertiaryFixedDim => const Color(0xffc6c6c6);
+  @override
+  Color get onTertiaryFixedVariant => const Color(0xff474747);
+  @override
+  Color get surfaceDim => const Color(0xffddd9d9);
+  @override
+  Color get surfaceBright => const Color(0xfffcf8f8);
+  @override
+  Color get surfaceContainerLowest => const Color(0xffffffff);
+  @override
+  Color get surfaceContainerLow => const Color(0xfff7f3f2);
+  @override
+  Color get surfaceContainer => const Color(0xfff1edec);
+  @override
+  Color get surfaceContainerHigh => const Color(0xffebe7e7);
+  @override
+  Color get surfaceContainerHighest => const Color(0xffe5e2e1);
 
   //main colors
   @override
@@ -48,7 +137,7 @@ class LightAppColorsScheme implements IAppColorScheme {
 
   //system colors
   @override
-  Color get system001 => const Color(0xffB44242);
+  Color get system001 => const Color(0xffba1a1a);
   @override
   Color get system002 => const Color(0xffD07836);
   @override
@@ -102,6 +191,65 @@ class LightAppColorsScheme implements IAppColorScheme {
 
 class DarkAppColorsScheme implements IAppColorScheme {
 
+  @override
+  Brightness get brightness => Brightness.dark;
+
+  //specific colors
+  @override
+  Color get onError => const Color(0xff690005);
+  @override
+  Color get errorContainer => const Color(0xff93000a);
+  @override
+  Color get onErrorContainer => const Color(0xffffdad6);
+  @override
+  Color get surface => const Color(0xff141313);
+  @override
+  Color get outline => const Color(0xff8e9192);
+  @override
+  Color get outlineVariant => const Color(0xff444748);
+  @override
+  Color get inverseSurface => const Color(0xffe5e2e1);
+  @override
+  Color get inversePrimary => const Color(0xff5e5e5e);
+  @override
+  Color get onPrimaryFixed => const Color(0xff1b1b1b);
+  @override
+  Color get primaryFixed => const Color(0xffe2e2e2);
+  @override
+  Color get surfaceContainerLowest => const Color(0xff0e0e0e);
+  @override
+  Color get surfaceBright => const Color(0xff3a3939);
+  @override
+  Color get surfaceDim => const Color(0xff141313);
+  @override
+  Color get onTertiaryFixedVariant => const Color(0xff474747);
+  @override
+  Color get tertiaryFixedDim => const Color(0xffc6c6c6);
+  @override
+  Color get onTertiaryFixed => const Color(0xff1b1b1b);
+  @override
+  Color get tertiaryFixed => const Color(0xffe2e2e2);
+  @override
+  Color get onSecondaryFixedVariant => const Color(0xff474747);
+  @override
+  Color get secondaryFixedDim => const Color(0xffc6c6c6);
+  @override
+  Color get onSecondaryFixed => const Color(0xff1b1b1b);
+  @override
+  Color get secondaryFixed => const Color(0xffe2e2e2);
+  @override
+  Color get onPrimaryFixedVariant => const Color(0xff474747);
+  @override
+  Color get primaryFixedDim => const Color(0xffc6c6c6);
+  @override
+  Color get surfaceContainerLow => const Color(0xff1c1b1b);
+  @override
+  Color get surfaceContainer => const Color(0xff201f1f);
+  @override
+  Color get surfaceContainerHigh => const Color(0xff2a2a2a);
+  @override
+  Color get surfaceContainerHighest => const Color(0xff353434);
+
   //main colors
   @override
   Color get main001 => const Color(0xffD4D4D4);
@@ -110,7 +258,7 @@ class DarkAppColorsScheme implements IAppColorScheme {
 
   //system colors
   @override
-  Color get system001 => const Color(0xffB44242);
+  Color get system001 => const Color(0xffffb4ab);
   @override
   Color get system002 => const Color(0xffD07836);
   @override

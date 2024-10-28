@@ -1,0 +1,16 @@
+{
+    "about": "Über uns",
+    "downloads": "Downloads",
+    "recources": "Ressourcen",
+    "why_pirato": "Warum ist Pirato kostenlos?",
+    "login": "Anmelden",
+    "forgot_password": "Passwort vergessen?",
+    "login_title": "Willkommen bei Pirato",
+    "login_headline": "Hallo junger Freund, willkommen an Bord",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "please_enter_email": "Bitte geben Sie eine E-Mail-Adresse ein",
+    "please_enter_valid_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "password_not_absent": "Das Passwort darf nicht fehlen",
+    "password_3_characters": "Das Passwort muss mindestens 3 Zeichen lang sein"
+}

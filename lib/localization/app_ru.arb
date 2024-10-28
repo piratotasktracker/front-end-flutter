@@ -2,5 +2,15 @@
     "about": "О нас",
     "downloads": "Загрузки",
     "recources": "Ресурсы",
-    "why_pirato": "Почему Pirato бесплатный?"
+    "why_pirato": "Почему Pirato бесплатный?",
+    "login": "Вход",
+    "forgot_password": "Забыли пароль?",
+    "login_title": "Добро пожаловать в Pirato",
+    "login_headline": "Привет, юный друг, добро пожаловать на борт",
+    "email": "Эл. почта",
+    "password": "Пароль",
+    "please_enter_email": "Пожалуйста, введите адрес эл. почты",
+    "please_enter_valid_email": "Пожалуйста, введите действительный адрес эл. почты",
+    "password_not_absent": "Пароль не может отсутствовать",
+    "password_3_characters": "Пароль должен содержать не менее 3 символов"
 }

@@ -22,7 +22,7 @@ class _ApiClient implements ApiClient {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<void> register({
+  Future<TokenModel> login({
     required String email,
     required String password,
   }) async {
@@ -33,7 +33,7 @@ class _ApiClient implements ApiClient {
       'email': email,
       'password': password,
     };
-    final _options = _setStreamType<void>(Options(
+    final _options = _setStreamType<TokenModel>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -49,7 +49,15 @@ class _ApiClient implements ApiClient {
           _dio.options.baseUrl,
           baseUrl,
         )));
-    await _dio.fetch<void>(_options);
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late TokenModel _value;
+    try {
+      _value = TokenModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {

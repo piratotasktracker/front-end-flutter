@@ -26,9 +26,9 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      routeInformationParser: AppRouter.router(AppRouter.routes).routeInformationParser,
-      routeInformationProvider: AppRouter.router(AppRouter.routes).routeInformationProvider,
-      routerDelegate: AppRouter.router(AppRouter.routes).routerDelegate,
+      routeInformationParser: AppRouter.router.routeInformationParser,
+      routeInformationProvider: AppRouter.router.routeInformationProvider,
+      routerDelegate: AppRouter.router.routerDelegate,
     );
   }
 }

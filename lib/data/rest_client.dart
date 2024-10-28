@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:front_end_flutter_tracker/data/constants.dart';
+import 'package:front_end_flutter_tracker/util/constants.dart';
+import 'package:front_end_flutter_tracker/model/token_model.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
@@ -11,7 +12,7 @@ abstract class ApiClient {
   factory ApiClient(Dio dio) => _ApiClient(dio);
 
   @POST('/login')
-  Future<void> register({
+  Future<TokenModel> login({
     @Field('email') required String email,
     @Field('password') required String password,
   });

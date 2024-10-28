@@ -1,10 +1,21 @@
+import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:front_end_flutter_tracker/styles/colors.dart";
 import "package:front_end_flutter_tracker/styles/typography.dart";
+import "package:front_end_flutter_tracker/util/no_trasition.dart";
 
 class AppTheme {
 
   static ThemeData theme(IAppColorScheme colorScheme) => ThemeData(
+    pageTransitionsTheme: PageTransitionsTheme(
+    builders: kIsWeb ? {
+      for(final platform in TargetPlatform.values)
+        platform: const NoTransitionBuilder()
+    } : {
+      for(final platform in TargetPlatform.values)
+        platform: const CupertinoPageTransitionsBuilder()
+    }
+  ),
     useMaterial3: true,
     colorScheme: ColorScheme(
       brightness: colorScheme.brightness, 
@@ -70,6 +81,17 @@ class AppTheme {
       titleLarge: AppTypography.titleLarge(),
       titleMedium: AppTypography.titleMedium(),
       titleSmall: AppTypography.titleSmall(),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        minimumSize: const Size.fromHeight(56), // Button height
+        backgroundColor: colorScheme.main001, // Background color
+        foregroundColor: colorScheme.static001, // Text color
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8), // Rounded corners
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 20), // Horizontal padding
+      ),
     ),
   );
 

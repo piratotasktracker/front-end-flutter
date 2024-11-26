@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:front_end_flutter_tracker/bloc/bread_crumbs/bread_crumbs_cubit.dart';
 import 'package:front_end_flutter_tracker/bloc/login/login_cubit.dart';
 import 'package:front_end_flutter_tracker/data/repository/auth/auth_repository.dart';
 import 'package:front_end_flutter_tracker/data/repository/auth/auth_repository_interface.dart';
@@ -32,6 +33,10 @@ class DependencyInjectionManager {
       () => AuthRepository(apiClient: sl<ApiClient>()),
     );
 
+    sl.registerLazySingleton<BreadCrumbsCubit>(
+      () => BreadCrumbsCubit()
+    );
+
     sl.registerFactory<LoginCubit>(
       () => LoginCubit(
         repository: sl<IAuthRepository>(), 
@@ -40,5 +45,4 @@ class DependencyInjectionManager {
     );
     
   }
-
 }

@@ -12,5 +12,10 @@
     "please_enter_email": "Please enter a E-mail",
     "please_enter_valid_email": "Please enter a valid E-mail",
     "password_not_absent": "Password can not be absent",
-    "password_3_characters": "Password must be at least 3 characters long"
+    "password_3_characters": "Password must be at least 3 characters long",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "cicd": "CI/CD",
+    "modules": "Modules",
+    "documentation": "Documentation"
 }

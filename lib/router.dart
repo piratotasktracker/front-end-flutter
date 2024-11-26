@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:front_end_flutter_tracker/presentation/home/home_screen.dart';
 import 'package:front_end_flutter_tracker/presentation/login/login_screen.dart';
 import 'package:front_end_flutter_tracker/sl.dart';
+import 'package:front_end_flutter_tracker/util/bread_crumbs/bread_crumbs_observer.dart';
 import 'package:front_end_flutter_tracker/util/shared_preferences_manager.dart';
 import 'package:go_router/go_router.dart';
 
@@ -8,7 +10,6 @@ class AppRouter {
 
   static final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
   static final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>();
-
 
   static GoRouter router = GoRouter(
     navigatorKey: AppRouter._rootNavigatorKey,
@@ -32,7 +33,8 @@ class AppRouter {
     ),
     ShellRoute(
       navigatorKey: AppRouter._shellNavigatorKey,
-      builder: (context, state, child) => SizedBox(child: child),
+      observers: [BreadCrumbObserver()],
+      builder: (context, state, child) => HomeScreen(child: child),
       routes: [
         GoRoute(
           path: AppRoutes.home,
@@ -59,6 +61,6 @@ class AppRoutes {
   static const String login = "/login";
   static const String signUp = "/signUp";
 
-  static const String home = '/';
+  static const String home = '/home';
 
 }

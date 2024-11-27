@@ -17,5 +17,12 @@
     "settings": "Settings",
     "cicd": "CI/CD",
     "modules": "Modules",
-    "documentation": "Documentation"
+    "documentation": "Documentation",
+    "create_new_task": "Create new task",
+    "logged_out": "Logged out",
+    "cancel": "Cancel",
+    "log_out": "Log Out",
+    "sure_log_out": "Are you sure you want to log out?",
+    "profile": "Profile"
+    
 }

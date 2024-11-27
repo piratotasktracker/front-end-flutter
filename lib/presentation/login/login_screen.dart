@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:front_end_flutter_tracker/bloc/login/login_cubit.dart';
-import 'package:front_end_flutter_tracker/presentation/login/login_app_bar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
+import 'package:front_end_flutter_tracker/bloc/login/login_cubit.dart';
+import 'package:front_end_flutter_tracker/presentation/login/widgets/login_app_bar.dart';
 import 'package:front_end_flutter_tracker/router.dart';
 import 'package:front_end_flutter_tracker/sl.dart';
 import 'package:front_end_flutter_tracker/styles/typography.dart';
-import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

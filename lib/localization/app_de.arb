@@ -17,5 +17,12 @@
     "settings": "Einstellungen",
     "cicd": "CI/CD",
     "modules": "Module",
-    "documentation": "Dokumentation"
+    "documentation": "Dokumentation",
+    "create_new_task": "Neue Aufgabe erstellen",
+    "logged_out": "Abgemeldet",
+    "cancel": "Abbrechen",
+    "log_out": "Abmelden",
+    "sure_log_out": "Sind Sie sicher, dass Sie sich abmelden möchten?",
+    "profile": "Profil"
+    
 }

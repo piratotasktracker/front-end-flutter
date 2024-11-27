@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'package:flutter_svg/svg.dart';
+
 import 'package:front_end_flutter_tracker/sl.dart';
 import 'package:front_end_flutter_tracker/styles/colors.dart';
 import 'package:front_end_flutter_tracker/styles/typography.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeSidePane extends StatelessWidget {
   final double width;
@@ -36,9 +38,13 @@ class HomeSidePane extends StatelessWidget {
                             maxWidth: 300
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                            padding: const EdgeInsets.symmetric(horizontal: 4),
                             child: ListTile(
-                              leading: SvgPicture.asset('assets/svg/skull-fill.svg'),
+                              leading: SvgPicture.asset(
+                                'assets/svg/skull-fill.svg', 
+                                height: 24, 
+                                width: 24,
+                              ),
                               title: const Text(
                                 'Pirato',
                                 style: TextStyle(

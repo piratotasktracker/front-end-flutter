@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'package:front_end_flutter_tracker/router.dart';
 import 'package:front_end_flutter_tracker/sl.dart';
 import 'package:front_end_flutter_tracker/styles/colors.dart';
 import 'package:front_end_flutter_tracker/styles/theme.dart';
-
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();

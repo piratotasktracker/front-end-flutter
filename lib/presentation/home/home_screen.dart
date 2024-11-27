@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:front_end_flutter_tracker/bloc/bread_crumbs/bread_crumbs_cubit.dart';
+import 'package:front_end_flutter_tracker/bloc/profile_cubit/profile_cubit.dart';
 import 'package:front_end_flutter_tracker/presentation/home/widgets/home_app_bar.dart';
 import 'package:front_end_flutter_tracker/presentation/home/widgets/home_side_pane.dart';
 import 'package:front_end_flutter_tracker/sl.dart';
@@ -16,8 +17,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<BreadCrumbsCubit>(
-      create: (context) => DependencyInjectionManager.sl<BreadCrumbsCubit>(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<BreadCrumbsCubit>(
+          create: (context) => DependencyInjectionManager.sl<BreadCrumbsCubit>(),
+        ),
+        BlocProvider<ProfileCubit>(
+          create: (context) => DependencyInjectionManager.sl<ProfileCubit>()..getProfile(),
+        ),
+      ],
       child: LayoutBuilder(
         builder: (context, constraints) {
           return _HomePrimarySizeScreen(

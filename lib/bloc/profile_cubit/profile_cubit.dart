@@ -16,6 +16,7 @@ class ProfileCubit extends Cubit<IProfileState>{
   }) : super(const ProfileInitialState());
 
   void getProfile() async {
+    emit(const ProfileLoadingState());
     final result = await repository.getProfile();
     if(result.$1!=null){
       emit(ProfileLoadedState(

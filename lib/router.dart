@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:front_end_flutter_tracker/presentation/dashboard/dashboard_screen.dart';
+
 import 'package:go_router/go_router.dart';
 
 import 'package:front_end_flutter_tracker/presentation/home/home_screen.dart';
@@ -40,15 +42,7 @@ class AppRouter {
         GoRoute(
           path: AppRoutes.home,
           name: AppRoutes.home,
-          builder: (context, state) => Scaffold(
-            floatingActionButton: FloatingActionButton(
-              onPressed: (){
-                DependencyInjectionManager.sl<SharedPreferencesManager>().removeToken();
-                context.goNamed(AppRoutes.login);
-              },
-              child: Icon(Icons.abc),
-            ),
-          )
+          builder: (context, state) => const DashboardScreen()
         ),
       ]
     )

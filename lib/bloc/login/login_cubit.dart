@@ -21,6 +21,7 @@ class LoginCubit extends Cubit<ILoginState>{
     required String email,
     required String password,
   }) async {
+    emit(const LoginLoadingState());
     final result = await repository.login(email: email, password: password);
     if(result.$1!=null){
       prefs.setToken(result.$1!.token);

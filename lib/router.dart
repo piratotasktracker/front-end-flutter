@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 import 'package:front_end_flutter_tracker/presentation/home/home_screen.dart';
 import 'package:front_end_flutter_tracker/presentation/login/login_screen.dart';
 import 'package:front_end_flutter_tracker/sl.dart';
 import 'package:front_end_flutter_tracker/util/bread_crumbs/bread_crumbs_observer.dart';
 import 'package:front_end_flutter_tracker/util/shared_preferences_manager.dart';
-import 'package:go_router/go_router.dart';
 
 class AppRouter {
 

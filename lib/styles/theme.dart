@@ -1,5 +1,6 @@
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
+
 import "package:front_end_flutter_tracker/styles/colors.dart";
 import "package:front_end_flutter_tracker/styles/typography.dart";
 import "package:front_end_flutter_tracker/util/no_trasition.dart";
@@ -9,13 +10,13 @@ class AppTheme {
   static ThemeData theme(IAppColorScheme colorScheme) => ThemeData(
     pageTransitionsTheme: PageTransitionsTheme(
     builders: kIsWeb ? {
-      for(final platform in TargetPlatform.values)
-        platform: const NoTransitionBuilder()
-    } : {
-      for(final platform in TargetPlatform.values)
-        platform: const CupertinoPageTransitionsBuilder()
-    }
-  ),
+        for(final platform in TargetPlatform.values)
+          platform: const NoTransitionBuilder()
+      } : {
+        for(final platform in TargetPlatform.values)
+          platform: const CupertinoPageTransitionsBuilder()
+      }
+    ),
     useMaterial3: true,
     colorScheme: ColorScheme(
       brightness: colorScheme.brightness, 

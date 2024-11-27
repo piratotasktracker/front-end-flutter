@@ -1,9 +1,14 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:front_end_flutter_tracker/util/constants.dart';
-import 'package:front_end_flutter_tracker/model/token_model.dart';
+
 import 'package:retrofit/retrofit.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:dio/dio.dart';
+
+import 'package:front_end_flutter_tracker/model/profile_model.dart';
+import 'package:front_end_flutter_tracker/sl.dart';
+import 'package:front_end_flutter_tracker/util/constants.dart';
+import 'package:front_end_flutter_tracker/model/token_model.dart';
+import 'package:front_end_flutter_tracker/util/shared_preferences_manager.dart';
 
 part 'rest_client.g.dart';
 
@@ -16,6 +21,9 @@ abstract class ApiClient {
     @Field('email') required String email,
     @Field('password') required String password,
   });
+
+  @GET('/me')
+  Future<ProfileModel> getProfile();
 
 }
 
@@ -32,7 +40,8 @@ class RestClient {
         receiveTimeout: const Duration(seconds: 20),
       )
     );
-    dio.interceptors.add(PrettyDioLogger(
+    dio.interceptors.add(
+      PrettyDioLogger(
         requestHeader: true,
         requestBody: true,
         responseBody: true,
@@ -41,15 +50,34 @@ class RestClient {
         compact: true,
         maxWidth: 90,
         enabled: kDebugMode,
-        filter: (options, args){
-            // don't print requests with uris containing '/posts' 
-            if(options.path.contains('/posts')){
-              return false;
-            }
-            // don't print responses with unit8 list data
-            return !args.isResponse || !args.hasUint8ListData;
+        filter: (options, args) {
+          if(options.path.contains('/posts')) {
+            return false;
           }
-      ));
+          return !args.isResponse || !args.hasUint8ListData;
+        }
+      )
+    );
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) async {
+          final token = DependencyInjectionManager.sl<SharedPreferencesManager>().getToken();
+          if (token != null) {
+            options.headers['Authorization'] = 'Bearer $token';
+          }
+          return handler.next(options);
+        },
+        onError: (error, handler) {
+          if (error.response?.statusCode == 401) {
+            //TODO: logout
+          }
+          return handler.next(error);
+        },
+        onResponse: (response, handler) {
+          return handler.next(response);
+        },
+      ),
+    );
     return ApiClient(dio);
   }
   

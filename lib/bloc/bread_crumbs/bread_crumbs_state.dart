@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+
 import 'package:front_end_flutter_tracker/util/bread_crumbs/bread_crumb_model.dart';
 
 class BreadCrumbsState extends Equatable{

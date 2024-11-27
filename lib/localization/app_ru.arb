@@ -17,5 +17,12 @@
     "settings": "Настройки",
     "cicd": "CI/CD",
     "modules": "Модули",
-    "documentation": "Документация"
+    "documentation": "Документация",
+    "create_new_task": "Создать задачу",
+    "logged_out": "Вы вышли из системы",
+    "cancel": "Отмена",
+    "log_out": "Выйти",
+    "sure_log_out": "Вы уверены, что хотите выйти?",
+    "profile": "Профиль"
+
 }

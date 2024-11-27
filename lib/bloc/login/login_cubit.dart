@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+
 import 'package:front_end_flutter_tracker/data/repository/auth/auth_repository_interface.dart';
 import 'package:front_end_flutter_tracker/model/result_model.dart';
 import 'package:front_end_flutter_tracker/util/shared_preferences_manager.dart';

@@ -23,6 +23,7 @@
     "cancel": "Cancel",
     "log_out": "Log Out",
     "sure_log_out": "Are you sure you want to log out?",
-    "profile": "Profile"
-    
+    "profile": "Profile",
+    "something_went_wrong": "Something went wrong",
+    "projects": "Projects"
 }

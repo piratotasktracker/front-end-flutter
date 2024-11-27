@@ -29,6 +29,7 @@ dependencies:
   flutter_bloc: ^8.1.6
   shared_preferences: ^2.3.2
   flutter_breadcrumb: ^1.0.1
+  avatar_stack: ^1.2.0
 
 dev_dependencies:
   flutter_test:

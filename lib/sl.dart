@@ -1,4 +1,6 @@
 import 'package:flutter/foundation.dart';
+import 'package:front_end_flutter_tracker/data/repository/dashboard/dashboard_repository.dart';
+import 'package:front_end_flutter_tracker/data/repository/dashboard/dashboard_repository_interface.dart';
 
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -36,6 +38,10 @@ class DependencyInjectionManager {
 
     sl.registerLazySingleton<BreadCrumbsCubit>(
       () => BreadCrumbsCubit()
+    );
+
+    sl.registerLazySingleton<IDashboardRepository>(
+      () => DashboardRepository(apiClient: sl<ApiClient>()),
     );
 
     sl.registerLazySingleton<IProfileRepository>(

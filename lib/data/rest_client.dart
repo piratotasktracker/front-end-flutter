@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:front_end_flutter_tracker/model/project_model.dart';
+import 'package:front_end_flutter_tracker/model/task_model.dart';
 
 import 'package:retrofit/retrofit.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
@@ -28,6 +29,9 @@ abstract class ApiClient {
 
   @GET('/projects')
   Future<List<ProjectModel>> getProjects();
+
+  @GET('/tasks/me')
+  Future<List<TaskModel>> getMyTasks();
 
 }
 

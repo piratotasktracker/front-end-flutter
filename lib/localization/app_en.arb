@@ -32,7 +32,6 @@
     "assignee": "Assignee",
     "created_at": "Created at",
     "created_by": "Created by",
-    "my_tasks": "My tasks",
-    "projects": "Projects"
+    "my_tasks": "My tasks"
     
 }

@@ -8,7 +8,6 @@ import 'package:front_end_flutter_tracker/bloc/projects/projects_cubit.dart';
 import 'package:front_end_flutter_tracker/data/repository/dashboard/dashboard_repository_interface.dart';
 import 'package:front_end_flutter_tracker/presentation/dashboard/widgets/my_tasks/my_tasks_widget.dart';
 import 'package:front_end_flutter_tracker/presentation/dashboard/widgets/projects/projects_widget.dart';
-import 'package:front_end_flutter_tracker/bloc/projects/projects_cubit.dart';
 import 'package:front_end_flutter_tracker/sl.dart';
 import 'package:front_end_flutter_tracker/styles/typography.dart';
 

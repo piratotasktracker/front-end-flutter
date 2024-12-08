@@ -25,5 +25,13 @@
     "sure_log_out": "Are you sure you want to log out?",
     "profile": "Profile",
     "something_went_wrong": "Something went wrong",
-    "projects": "Projects"
+    "projects": "Projects",
+    "task": "Task",
+    "project_id": "Project ID",
+    "status": "Status",
+    "assignee": "Assignee",
+    "created_at": "Created at",
+    "created_by": "Created by",
+    "my_tasks": "My tasks"
+
 }

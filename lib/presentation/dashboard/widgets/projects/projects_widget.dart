@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:front_end_flutter_tracker/bloc/projects/projects_cubit.dart';
-import 'package:front_end_flutter_tracker/presentation/dashboard/widgets/project_card.dart';
+import 'package:front_end_flutter_tracker/presentation/dashboard/widgets/projects/project_card.dart';
 import 'package:front_end_flutter_tracker/presentation/reusable_widgets.dart/error_widget.dart';
 
 class ProjectsWidget extends StatelessWidget {
@@ -16,7 +16,7 @@ class ProjectsWidget extends StatelessWidget {
       builder: (context, state) {
         if(state is ProjectsLoadedState){
           return SizedBox(
-            height: 168,
+            height: state.projects.isNotEmpty ? 168 : 0,
             child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,

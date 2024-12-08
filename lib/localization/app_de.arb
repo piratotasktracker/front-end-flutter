@@ -25,5 +25,13 @@
     "sure_log_out": "Sind Sie sicher, dass Sie sich abmelden möchten?",
     "profile": "Profil",
     "something_went_wrong": "Da ist etwas schiefgelaufen",
-    "projects": "Projekte"
+    "projects": "Projekte",
+    "task": "Aufgabe",
+    "project_id": "Projekt ID",
+    "status": "Status",
+    "assignee": "Zugewiesene Person",
+    "created_at": "Erstellt am",
+    "created_by": "Erstellt von",
+    "my_tasks": "Meine Aufgaben"
+    
 }

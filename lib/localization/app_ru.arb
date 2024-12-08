@@ -25,6 +25,13 @@
     "sure_log_out": "Вы уверены, что хотите выйти?",
     "profile": "Профиль",
     "something_went_wrong": "Что-то пошло не так",
-    "projects": "Проекты"
-
+    "projects": "Проекты",
+    "task": "Задача",
+    "project_id": "ID проекта",
+    "status": "Статус",
+    "assignee": "Исполнитель",
+    "created_at": "Дата создания",
+    "created_by": "Создано",
+    "my_tasks": "Мои задачи"
+    
 }

@@ -32,6 +32,7 @@
     "assignee": "Zugewiesene Person",
     "created_at": "Erstellt am",
     "created_by": "Erstellt von",
-    "my_tasks": "Meine Aufgaben"
+    "my_tasks": "Meine Aufgaben",
+    "projects": "Projekte"
     
 }

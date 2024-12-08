@@ -8,6 +8,7 @@ import 'package:front_end_flutter_tracker/bloc/projects/projects_cubit.dart';
 import 'package:front_end_flutter_tracker/data/repository/dashboard/dashboard_repository_interface.dart';
 import 'package:front_end_flutter_tracker/presentation/dashboard/widgets/my_tasks/my_tasks_widget.dart';
 import 'package:front_end_flutter_tracker/presentation/dashboard/widgets/projects/projects_widget.dart';
+import 'package:front_end_flutter_tracker/bloc/projects/projects_cubit.dart';
 import 'package:front_end_flutter_tracker/sl.dart';
 import 'package:front_end_flutter_tracker/styles/typography.dart';
 
@@ -26,31 +27,31 @@ class DashboardScreen extends StatelessWidget {
         )),
       ],
       child: CustomScrollView(
-  slivers: [
-    SliverList(
-      delegate: SliverChildListDelegate(
-        [
-          Padding(
-            padding: const EdgeInsets.all(24),
-            child: Text(
-              AppLocalizations.of(context)!.projects,
-              style: AppTypography.titleLarge(),
+        slivers: [
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Text(
+                    AppLocalizations.of(context)!.projects,
+                    style: AppTypography.titleLarge(),
+                  ),
+                ),
+                const ProjectsWidget(),
+                Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Text(
+                    AppLocalizations.of(context)!.my_tasks,
+                    style: AppTypography.titleLarge(),
+                  ),
+                ),
+                const MyTasksWidget(),
+              ],
             ),
           ),
-          const ProjectsWidget(),
-          Padding(
-            padding: const EdgeInsets.all(24),
-            child: Text(
-              AppLocalizations.of(context)!.my_tasks,
-              style: AppTypography.titleLarge(),
-            ),
-          ),
-          const MyTasksWidget(),
         ],
       ),
-    ),
-  ],
-),
     );
   }
 

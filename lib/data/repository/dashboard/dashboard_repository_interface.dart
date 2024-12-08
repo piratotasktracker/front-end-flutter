@@ -5,7 +5,7 @@ import 'package:front_end_flutter_tracker/model/task_model.dart';
 
 abstract class IDashboardRepository {
   Future<(List<ProjectModel>?, ErrorMessage?)> getProjects();
-
+  
   Future<(List<TaskModel>?, ErrorMessage?)> getMyTasks();
 
   final ApiClient apiClient;

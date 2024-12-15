@@ -10,7 +10,9 @@ class ProjectModel {
   final String id;
   final String name;
   final String description;
+  @JsonKey(name: 'created_at')
   final String createdAt;
+  @JsonKey(name: 'updated_at')
   final String updatedAt;
   final List<UserModel> teamMembers;
 

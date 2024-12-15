@@ -29,7 +29,9 @@ abstract class ITaskModel{
 @JsonSerializable()
 class TaskModel extends ITaskModel {
   final String id;
+  @JsonKey(name: 'created_at')
   final String createdAt;
+  @JsonKey(name: 'updated_at')
   final String updatedAt;
   final List<ChildTaskResponse> linkedTasks;
   final UserModel? assignee;
@@ -58,9 +60,9 @@ class TaskModel extends ITaskModel {
 class ChildTaskResponse extends ITaskModel{
   @JsonKey(name: 'id')
   final String id;
-  @JsonKey(name: "createdAt")
+  @JsonKey(name: 'created_at')
   final String createdAt;
-  @JsonKey(name: "updatedAt")
+  @JsonKey(name: 'updated_at')
   final String updatedAt;
 
   const ChildTaskResponse({

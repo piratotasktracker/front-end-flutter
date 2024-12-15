@@ -34,6 +34,7 @@ class DashboardRepository extends IDashboardRepository {
    try{
       return (await apiClient.getMyTasks(), null);
     } catch (e){
+      print(e.toString());
       if (e is DioException) {
         return (null, ErrorMessage(
           result: e.response?.data is String ? jsonDecode((e.response?.data as String))['result'] ?? 'An error occurred' : 'An error occurred', 

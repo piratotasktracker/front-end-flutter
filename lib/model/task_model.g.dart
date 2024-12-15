@@ -17,12 +17,12 @@ TaskModel _$TaskModelFromJson(Map<String, dynamic> json) => TaskModel(
       createdBy: json['createdBy'] == null
           ? null
           : UserModel.fromJson(json['createdBy'] as Map<String, dynamic>),
-      createdAt: json['createdAt'] as String,
+      createdAt: json['created_at'] as String,
       id: json['id'] as String,
       linkedTasks: (json['linkedTasks'] as List<dynamic>)
           .map((e) => ChildTaskResponse.fromJson(e as Map<String, dynamic>))
           .toList(),
-      updatedAt: json['updatedAt'] as String,
+      updatedAt: json['updated_at'] as String,
     );
 
 Map<String, dynamic> _$TaskModelToJson(TaskModel instance) => <String, dynamic>{
@@ -31,8 +31,8 @@ Map<String, dynamic> _$TaskModelToJson(TaskModel instance) => <String, dynamic>{
       'createdById': instance.createdById,
       'assigneeId': instance.assigneeId,
       'id': instance.id,
-      'createdAt': instance.createdAt,
-      'updatedAt': instance.updatedAt,
+      'created_at': instance.createdAt,
+      'updated_at': instance.updatedAt,
       'linkedTasks': instance.linkedTasks,
       'assignee': instance.assignee,
       'createdBy': instance.createdBy,
@@ -43,10 +43,10 @@ ChildTaskResponse _$ChildTaskResponseFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String,
       id: json['id'] as String,
       description: json['description'] as String,
-      createdAt: json['createdAt'] as String,
+      createdAt: json['created_at'] as String,
       createdById: json['createdById'] as String,
       assigneeId: json['assigneeId'] as String,
-      updatedAt: json['updatedAt'] as String,
+      updatedAt: json['updated_at'] as String,
       projectId: json['projectId'] as String,
     );
 
@@ -58,6 +58,6 @@ Map<String, dynamic> _$ChildTaskResponseToJson(ChildTaskResponse instance) =>
       'assigneeId': instance.assigneeId,
       'description': instance.description,
       'id': instance.id,
-      'createdAt': instance.createdAt,
-      'updatedAt': instance.updatedAt,
+      'created_at': instance.createdAt,
+      'updated_at': instance.updatedAt,
     };

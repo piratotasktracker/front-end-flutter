@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:flutter_svg/svg.dart';
 
 import 'package:front_end_flutter_tracker/presentation/home/widgets/bread_crumbs_widget.dart';
+import 'package:front_end_flutter_tracker/presentation/home/widgets/create_new_task_widget.dart';
 import 'package:front_end_flutter_tracker/presentation/home/widgets/profile_widget.dart';
 import 'package:front_end_flutter_tracker/sl.dart';
 import 'package:front_end_flutter_tracker/styles/colors.dart';
@@ -27,14 +27,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       centerTitle: false,
       actions: [
-        SizedBox(
-          height: 32,
-          width: 200,
-          child: ElevatedButton(
-            onPressed: (){}, 
-            child: Text(AppLocalizations.of(context)!.create_new_task)
-          ),
-        ),
+        const CreateNewTaskWidget(),
         const SizedBox(width: 32),
         SizedBox.square(
           dimension: 32,

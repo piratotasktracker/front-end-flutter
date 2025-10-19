@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:front_end_flutter_tracker/model/project_model.dart';
+import 'package:front_end_flutter_tracker/model/role_model.dart';
 import 'package:front_end_flutter_tracker/model/task_model.dart';
 
 import 'package:retrofit/retrofit.dart';
@@ -33,6 +34,9 @@ abstract class ApiClient {
   @GET('/tasks/me')
   Future<List<TaskModel>> getMyTasks();
 
+  @GET('/roles')
+  Future<List<RoleModel>> getRoles();
+ 
 }
 
 class RestClient {

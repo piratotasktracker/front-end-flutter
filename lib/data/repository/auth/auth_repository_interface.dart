@@ -1,5 +1,6 @@
 import 'package:front_end_flutter_tracker/data/rest_client.dart';
 import 'package:front_end_flutter_tracker/model/result_model.dart';
+import 'package:front_end_flutter_tracker/model/role_model.dart';
 import 'package:front_end_flutter_tracker/model/token_model.dart';
 
 abstract class IAuthRepository {
@@ -7,6 +8,8 @@ abstract class IAuthRepository {
     required String email,
     required String password, 
   });
+
+  Future<(List<RoleModel>?, ErrorMessage?)> getRoles();
 
   final ApiClient apiClient;
 

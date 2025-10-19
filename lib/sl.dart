@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:front_end_flutter_tracker/data/repository/app_repository.dart';
 import 'package:front_end_flutter_tracker/data/repository/dashboard/dashboard_repository.dart';
 import 'package:front_end_flutter_tracker/data/repository/dashboard/dashboard_repository_interface.dart';
 
@@ -26,6 +27,12 @@ class DependencyInjectionManager {
 
     sl.registerSingleton<SharedPreferencesManager>(
       SharedPreferencesManager(prefs: prefs),
+    );
+
+    sl.registerLazySingleton<AppRepository>(
+      () => AppRepository(
+        roles: null
+      )
     );
 
     sl.registerSingleton<IAppColorScheme>(
@@ -62,6 +69,7 @@ class DependencyInjectionManager {
       () => LoginCubit(
         repository: sl<IAuthRepository>(), 
         prefs: sl<SharedPreferencesManager>(),
+        appRepository: sl<AppRepository>(),
       )
     );
     

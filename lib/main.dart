@@ -20,12 +20,14 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     //final brightness = PlatformDispatcher.instance.platformBrightness;
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.theme(
         DependencyInjectionManager.sl<IAppColorScheme>()
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
+      locale: const Locale('en'),
       routeInformationParser: AppRouter.router.routeInformationParser,
       routeInformationProvider: AppRouter.router.routeInformationProvider,
       routerDelegate: AppRouter.router.routerDelegate,

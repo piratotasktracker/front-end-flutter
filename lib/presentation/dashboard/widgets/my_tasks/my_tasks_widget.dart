@@ -47,12 +47,4 @@ class MyTasksWidget extends StatelessWidget {
     return dateFormatter.format(date);
   }
 
-  TableBorder get _tableBorder => const TableBorder(
-    horizontalInside: BorderSide.none,
-    left: BorderSide.none,
-    right: BorderSide.none,
-    top: BorderSide.none,
-    bottom: BorderSide.none,
-    verticalInside: BorderSide.none,
-  );
 }

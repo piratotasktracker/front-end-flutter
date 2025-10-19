@@ -11,7 +11,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       avatar: json['avatar'] as String?,
       email: json['email'] as String,
       fullName: json['full_name'] as String,
-      role: $enumDecode(_$PermissionLevelEnumMap, json['role']),
+      roleId: json['roleId'] as String,
     );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
@@ -19,13 +19,5 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'avatar': instance.avatar,
       'email': instance.email,
       'full_name': instance.fullName,
-      'role': _$PermissionLevelEnumMap[instance.role]!,
+      'roleId': instance.roleId,
     };
-
-const _$PermissionLevelEnumMap = {
-  PermissionLevel.unknown: 0,
-  PermissionLevel.executor: 1,
-  PermissionLevel.manager: 2,
-  PermissionLevel.administrator: 3,
-  PermissionLevel.owner: 4,
-};

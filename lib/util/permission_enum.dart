@@ -1,0 +1,17 @@
+enum PermissionEnum{
+  canCreateProjects,
+  canUpdateProjects,
+  canDeleteProjects,
+  canGetProjects,
+  canCreateTasks,
+  canUpdateTasks,
+  canDeleteTasks,
+  canGetTasks,
+  canUpdateUsers,
+  canDeleteUsers,
+  canGetUsers,
+  canCreateRoles,
+  canUpdateRoles,
+  canDeleteRoles,
+  canGetRoles,
+}

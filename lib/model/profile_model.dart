@@ -9,11 +9,13 @@ class ProfileModel {
   final String? avatar;
   @JsonKey(name: 'full_name')
   final String fullName;
+  final String roleId;
   final String id;
 
   const ProfileModel({
     required this.id,
     required this.fullName,
+    required this.roleId,
     this.avatar,
     required this.email
   });
